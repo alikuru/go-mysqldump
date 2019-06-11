@@ -53,3 +53,4 @@ func main() {
 
 [![GoDoc](https://godoc.org/github.com/alikuru/go-mysqldump?status.svg)](https://godoc.org/github.com/alikuru/go-mysqldump)
 [![Build Status](https://travis-ci.org/alikuru/go-mysqldump.svg?branch=master)](https://travis-ci.org/alikuru/go-mysqldump)
+[![Go Report Card](https://goreportcard.com/badge/github.com/alikuru/go-mysqldump)](https://goreportcard.com/report/github.com/alikuru/go-mysqldump)

@@ -1,5 +1,5 @@
 /*
-Create MYSQL dumps in Go without the 'mysqldump' CLI as a dependancy.
+Create MYSQL dumps in Go without the 'mysqldump' CLI as a dependency.
 
 Example
 

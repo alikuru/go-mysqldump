@@ -29,7 +29,7 @@ func TestGetTablesOk(t *testing.T) {
 	assert.NoError(t, err)
 
 	// we make sure that all expectations were met
-	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expections")
+	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expectations")
 
 	assert.EqualValues(t, []string{"Test_Table_1", "Test_Table_2"}, result)
 }
@@ -54,7 +54,7 @@ func TestIgnoreTablesOk(t *testing.T) {
 	assert.NoError(t, err)
 
 	// we make sure that all expectations were met
-	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expections")
+	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expectations")
 
 	assert.EqualValues(t, []string{"Test_Table_2"}, result)
 }
@@ -80,7 +80,7 @@ func TestGetTablesNil(t *testing.T) {
 	assert.NoError(t, err)
 
 	// we make sure that all expectations were met
-	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expections")
+	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expectations")
 
 	assert.EqualValues(t, []string{"Test_Table_1", "Test_Table_3"}, result)
 }
@@ -101,7 +101,7 @@ func TestGetServerVersionOk(t *testing.T) {
 	assert.NoError(t, meta.updateServerVersion(db), "error was not expected while updating stats")
 
 	// we make sure that all expectations were met
-	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expections")
+	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expectations")
 
 	assert.Equal(t, "test_version", meta.ServerVersion)
 }
@@ -127,7 +127,7 @@ func TestCreateTableSQLOk(t *testing.T) {
 	assert.NoError(t, err)
 
 	// we make sure that all expectations were met
-	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expections")
+	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expectations")
 
 	expectedResult := "CREATE TABLE 'Test_Table' (`id` int(11) NOT NULL AUTO_INCREMENT,`s` char(60) DEFAULT NULL, PRIMARY KEY (`id`))ENGINE=InnoDB DEFAULT CHARSET=latin1"
 
@@ -160,7 +160,7 @@ func TestCreateTableRowValues(t *testing.T) {
 	assert.NoError(t, table.Err)
 
 	// we make sure that all expectations were met
-	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expections")
+	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expectations")
 
 	assert.EqualValues(t, "('1','test@test.de','Test Name 1')", result)
 }
@@ -188,7 +188,7 @@ func TestCreateTableValuesSteam(t *testing.T) {
 	assert.EqualValues(t, "INSERT INTO `test` VALUES ('1','test@test.de','Test Name 1'),('2','test2@test.de','Test Name 2');", <-s)
 
 	// we make sure that all expectations were met
-	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expections")
+	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expectations")
 }
 
 func TestCreateTableValuesSteamSmallPackets(t *testing.T) {
@@ -215,7 +215,7 @@ func TestCreateTableValuesSteamSmallPackets(t *testing.T) {
 	assert.EqualValues(t, "INSERT INTO `test` VALUES ('2','test2@test.de','Test Name 2');", <-s)
 
 	// we make sure that all expectations were met
-	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expections")
+	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expectations")
 }
 
 func TestCreateTableAllValuesWithNil(t *testing.T) {
@@ -245,7 +245,7 @@ func TestCreateTableAllValuesWithNil(t *testing.T) {
 	}
 
 	// we make sure that all expectations were met
-	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expections")
+	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expectations")
 
 	expectedResults := []string{"('1',NULL,'Test Name 1')", "('2','test2@test.de','Test Name 2')", "('3','','Test Name 3')"}
 
@@ -283,7 +283,7 @@ func TestCreateTableOk(t *testing.T) {
 	data.writeTable(table)
 
 	// we make sure that all expectations were met
-	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expections")
+	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expectations")
 
 	expectedResult := `
 --
@@ -341,7 +341,7 @@ func TestCreateTableOkSmallPackets(t *testing.T) {
 	data.writeTable(table)
 
 	// we make sure that all expectations were met
-	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expections")
+	assert.NoError(t, mock.ExpectationsWereMet(), "there were unfulfilled expectations")
 
 	expectedResult := `
 --
