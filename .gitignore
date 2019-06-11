@@ -1,1 +1,7 @@
 vendor/*
+.idea/
+.idea/workspace.xml
+**/.idea/workspace.xml
+*.out
+*.exe
+.DS_Store
